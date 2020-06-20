@@ -1,4 +1,6 @@
-= RS485 Library for Arduino =
+= RS485 Library for Arduino (MOD) =
+
+remove the default RS485 lib from arduino in order to avoid conflict
 
 image:https://github.com/arduino-libraries/ArduinoRS485/workflows/Compile%20Examples/badge.svg["Compile Examples Status", link="https://github.com/arduino-libraries/ArduinoRS485/actions?workflow=Compile+Examples"] image:https://github.com/arduino-libraries/ArduinoRS485/workflows/Spell%20Check/badge.svg["Spell Check Status", link="https://github.com/arduino-libraries/ArduinoRS485/actions?workflow=Spell+Check"]
 
