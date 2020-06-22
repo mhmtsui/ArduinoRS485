@@ -30,7 +30,23 @@ RS485Class::RS485Class(HardwareSerial& hwSerial, int txPin, int dePin, int rePin
 
 void RS485Class::begin(unsigned long baudrate)
 {
-  begin(baudrate, SERIAL_8N1);
+  //begin(baudrate);
+   _baudrate = baudrate;
+  _config = 0;
+
+  if (_dePin > -1) {
+    pinMode(_dePin, OUTPUT);
+    digitalWrite(_dePin, LOW);
+  }
+
+  if (_rePin > -1) {
+    pinMode(_rePin, OUTPUT);
+    digitalWrite(_rePin, HIGH);
+  }
+
+  _transmisionBegun = false;
+
+  _serial->begin(baudrate);
 }
 
 void RS485Class::begin(unsigned long baudrate, uint16_t config)
