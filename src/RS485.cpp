@@ -104,6 +104,13 @@ void RS485Class::flush()
   return _serial->flush();
 }
 
+void RS485Class::purge()
+{
+#if defined(__PIC32MX__) || defined(__PIC32MZ__)
+  return _serial->purge();
+#endif
+}
+
 size_t RS485Class::write(uint8_t b)
 {
   if (!_transmisionBegun) {

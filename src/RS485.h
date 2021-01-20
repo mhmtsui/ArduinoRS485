@@ -52,6 +52,7 @@ class RS485Class : public Stream {
     virtual int peek();
     virtual int read(void);
     virtual void flush();
+    virtual void purge();
     virtual size_t write(uint8_t b);
     using Print::write; // pull in write(str) and write(buf, size) from Print
     virtual operator bool();
